@@ -1,0 +1,148 @@
+//Insert Dropdown menu to Select Dietary Restriction
+dropdown("dropDown", "Select Dietary Restriction", 
+"Vegan",
+"Vegetarian",
+"Pescetarian",
+"Lactose Intolerant",
+"Diabetic",
+"Celiac Disease",
+"Kosher",
+"Halal",
+"Pregnant",
+"Food Allergy",
+"Custom");
+
+//Changes the dropdown position
+setPosition("dropDown", 10, 260, 300, 50);
+
+  //If buttons are pressed, use buttons to navigate
+  onEvent("RecipeButton", "click", function( ) {
+    
+    setScreen("RecipeScreen");
+    
+    //Insert Dropdown menu to Select Dietary Restriction (All Recipe)
+    dropdown("dropdown", "Select Dietary Restriction", 
+    "Vegan",
+    "Vegetarian",
+    "Pescetarian",
+    "Lactose Intolerant",
+    "Diabetic",
+    "Celiac Disease",
+    "Kosher",
+    "Halal",
+    "Pregnant",
+    "Food Allergy",
+    "Custom");
+
+    //Changes the dropdown position
+    setPosition("dropdown", 10, 220, 300, 100);
+    
+    
+  });
+  
+onEvent("PregnantGo", "click", function( ) {
+  setScreen("PregnantRecipesGo");
+});
+
+onEvent("ChocoID", "click", function( ) {
+  setScreen("PregnantRecipesGo");
+});
+
+
+//Sees if the dropdown menu changes
+onEvent("dropDown", "change", function( ) {
+  
+  //Identifies the dropdown menu text
+  var choices = getProperty("dropDown", "value");
+  
+  //Changes screen based on dropdown selection
+  if(choices == "Vegan") {
+    setScreen("Vegan");
+  }
+  else if(choices == "Vegetarian") {
+    setScreen("Vegetarian");
+  }
+  else if(choices == "Pescetarian") {
+    setScreen("Pescetarian");
+  }
+  else if(choices == "Lactose Intolerant") {
+    setScreen("Lactose Intolerant");
+  }
+  else if(choices == "Diabetic") {
+    setScreen("Diabetic");
+  }
+  else if(choices == "Celiac Disease") {
+    setScreen("Celiac Disease");
+  }
+  else if(choices == "Kosher") {
+    setScreen("Kosher");
+  }
+  else if(choices == "Halal") {
+    setScreen("Halal");
+  }
+  else if(choices == "Pregnant") {
+    setScreen("Pregnant");
+    //When checkbox1 is clicked, change the screen
+    
+    
+    
+  }
+  else if(choices == "Food Allergy") {
+    setScreen("Food Allergy");
+  }
+  else if(choices == "Custom") {
+    setScreen("Custom");
+  }
+  else {
+    //Do nothing, don't change screen
+  }
+  
+  
+  
+});
+onEvent("ChocoID", "click", function(event) {
+  console.log("ChocoID clicked!");
+  
+  setScreen ("ChocoRecipe");
+});
+onEvent("AllRecipesFollow", "click", function(event) {
+  console.log("AllRecipesFollow clicked!");
+  setScreen ("RecipeScreen");
+});
+onEvent("RecipeButtonP", "click", function(event) {
+  console.log("RecipeButtonP clicked!");
+  setScreen ("RecipeScreen");
+});
+onEvent("RecipeButton", "click", function(event) {
+  console.log("RecipeButton clicked!");
+  setScreen ("RecipeScreen");
+});
+onEvent("button12", "click", function(event) {
+  console.log("RecipeButton clicked!");
+  setScreen ("RecipeScreen");
+});
+onEvent("StoreButton", "click", function(event) {
+  console.log("StoresButton clicked!");
+  setScreen ("StoreScreen");
+});
+onEvent("StoresButton", "click", function(event) {
+  console.log("StoresButton clicked!");
+  setScreen ("StoreScreen");
+});
+onEvent("button13", "click", function(event) {
+  console.log("StoresButton clicked!");
+  setScreen ("StoreScreen");
+});
+
+onEvent("ProduceButton", "click", function(event) {
+  console.log("ProduceButton clicked!");
+  setScreen ("produce");
+});
+onEvent("EatButton", "click", function(event) {
+  console.log("ProduceButton clicked!");
+  setScreen ("produce");
+});
+onEvent("button14", "click", function(event) {
+  console.log("StoresButton clicked!");
+  setScreen ("StoreScreen");
+});
